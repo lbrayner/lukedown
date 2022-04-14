@@ -72,7 +72,7 @@ Keep notifications on the message tray until clicked.
 > sudo apt install chromium
 > ~~~
 
-Or you may pin only release `linuxmint` and install Google Chromium it like this:
+Or you may pin only release `linuxmint` and install Google Chromium like this:
 
 ~~~
 sudo apt install -t linuxmint chromium
