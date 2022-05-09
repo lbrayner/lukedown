@@ -18,6 +18,13 @@ sudo apt install gnome-shell-extensions
 
 Tool to adjust advanced configuration settings for GNOME.
 
+## Unite
+
+<https://extensions.gnome.org/extension/1287/unite/>
+
+> *Unite is a GNOME Shell extension which makes a few layout tweaks to the top*
+> *panel and removes window decorations to make it look like Ubuntu Unity Shell.*
+
 ~~~
 sudo apt install gnome-tweaks
 ~~~
