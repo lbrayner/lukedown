@@ -6,17 +6,23 @@ files in `/etc/X11/Xsession.d`, specifically
 
 # Gnome shell extensions
 
-Extend functionality of GNOME Shell.
+Extend functionality of GNOME Shell. The following package contains a few useful
+extensions:
 
 ~~~
 sudo apt install gnome-shell-extensions
 ~~~
 
-## Gnome tweaks
+Via <https://linuxhint.com/installing_gnome_extensions_ubuntu>:
 
-<https://askubuntu.com/a/1325739>
-
-Tool to adjust advanced configuration settings for GNOME.
+> Gnome shell extensions can also be downloaded from its official website using a
+> web browser. Open any web browser in your system and navigate to the following
+> address:
+>
+> <https://extensions.gnome.org>
+>
+> To install Gnome shell extensions from your browser, you will need a browser
+> extension (add-on). Hit **Click here to install browser extension**.
 
 ## Unite
 
@@ -25,15 +31,21 @@ Tool to adjust advanced configuration settings for GNOME.
 > *Unite is a GNOME Shell extension which makes a few layout tweaks to the top*
 > *panel and removes window decorations to make it look like Ubuntu Unity Shell.*
 
-~~~
-sudo apt install gnome-tweaks
-~~~
-
 ## Permanent notifications
+
+<https://extensions.gnome.org/extension/41/permanent-notifications/>
 
 Keep notifications on the message tray until clicked.
 
-<https://extensions.gnome.org/extension/41/permanent-notifications/>
+<https://askubuntu.com/a/1325739>
+
+# Gnome tweaks
+
+Tool to adjust advanced configuration settings for GNOME, including extensions.
+
+~~~
+sudo apt install gnome-tweaks
+~~~
 
 # Latest Google Chromium as a package (not a snap)
 
@@ -42,39 +54,39 @@ Keep notifications on the message tray until clicked.
 ## Linux Mint 20.3 Una
 
 > Create an apt source file for the Mint repository:
-> 
+>
 > ~~~
 > echo "deb http://packages.linuxmint.com una upstream" | sudo tee /etc/apt/sources.list.d/mint-una.list
 > ~~~
-> 
+>
 > To prevent NO\_PUBKEY you have to add the GPG key:
-> 
+>
 > ~~~
 > sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com A1715D88E1DF1F24 40976EAF437D05B5 3B4FE6ACC0B21F32 A6616109451BBBF2
 > ~~~
-> 
+>
 > Then update package lists:
-> 
+>
 > ~~~
 > sudo apt update
 > ~~~
-> 
+>
 > Prevent installation of other packages with a pin-file:
-> 
+>
 > ~~~
 > cat <<EOF | sudo tee /etc/apt/preferences.d/pin-chromium
 > Package: *
 > Pin: release o=linuxmint
 > Pin-Priority: -1
-> 
+>
 > Package: chromium
 > Pin: release o=linuxmint
 > Pin-Priority: 1000
 > EOF
 > ~~~
-> 
+>
 > Install chromium:
-> 
+>
 > ~~~
 > sudo apt install chromium
 > ~~~
@@ -93,4 +105,21 @@ Pin: release o=linuxmint
 Pin-Priority: -1
 
 # vim: ft=conf
+```
+
+# Disable Super+N shortcuts (switch to application)
+
+<https://askubuntu.com/a/968110>
+
+This will disable the **Dash to Dock** extension hotkeys:
+
+```
+gsettings set org.gnome.shell.extensions.dash-to-dock hot-keys false
+```
+
+And this will clear the Gnome default shortcuts for those combos:
+
+```
+for i in {1..9}; do gsettings set "org.gnome.shell.keybindings" \
+  "switch-to-application-$i" "[]"; done
 ```
