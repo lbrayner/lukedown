@@ -39,6 +39,14 @@ Keep notifications on the message tray until clicked.
 
 <https://askubuntu.com/a/1325739>
 
+## Panel Date Format
+
+<https://extensions.gnome.org/extension/3465/panel-date-format/>
+
+Allows for customizing of the date format on the panel.
+
+<https://askubuntu.com/a/1345588>
+
 # Gnome tweaks
 
 Tool to adjust advanced configuration settings for GNOME, including extensions.
