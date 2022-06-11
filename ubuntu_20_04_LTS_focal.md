@@ -47,6 +47,15 @@ Allows for customizing of the date format on the panel.
 
 <https://askubuntu.com/a/1345588>
 
+## Vitals
+
+<https://extensions.gnome.org/extension/1460/vitals/>
+
+> *A glimpse into your computer's temperature, voltage, fan speed, memory usage,*
+> *processor load, system resources, network speed and storage stats. This is a one*
+> *stop shop to monitor all of your vital sensors. Uses asynchronous polling to*
+> *provide a smooth user experience.*
+
 # Gnome tweaks
 
 Tool to adjust advanced configuration settings for GNOME, including extensions.
@@ -131,3 +140,13 @@ And this will clear the Gnome default shortcuts for those combos:
 for i in {1..9}; do gsettings set "org.gnome.shell.keybindings" \
   "switch-to-application-$i" "[]"; done
 ```
+
+# Screenkey: key cast your keys
+
+It's best to get straight from the official repository:
+
+<https://gitlab.com/screenkey/screenkey>
+
+It comes with a `.desktop` file (in the `data` folder). Copy that to
+`~/.local/share/applications` and set _Exec_ to the full path of the `screenkey`
+script.
