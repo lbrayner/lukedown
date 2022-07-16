@@ -150,3 +150,19 @@ It's best to get straight from the official repository:
 It comes with a `.desktop` file (in the `data` folder). Copy that to
 `~/.local/share/applications` and set _Exec_ to the full path of the `screenkey`
 script.
+
+# Media keys slow/delayed on Ubuntu Gnome 3
+
+Open `/usr/share/X11/xkb/symbols/br` and comment the line:
+
+~~~
+    modifier_map Mod3   { Scroll_Lock };
+~~~
+
+Run:
+
+```
+setxkbmap br
+```
+
+<https://askubuntu.com/a/1072160>
