@@ -166,3 +166,54 @@ setxkbmap br
 ```
 
 <https://askubuntu.com/a/1072160>
+
+# Automatically connect to VPN
+
+<https://askubuntu.com/a/1401042>
+
+[This
+page](https://manpages.debian.org/testing/network-manager/nm-settings.5.en.html)
+says that you can't use autoconnect with VPN profiles, but `secondaries` can be
+used instead.
+
+List all existing connections:
+
+```
+ls -lh /etc/NetworkManager/system-connections/
+```
+
+Get the `uuid` of the corresponding VPN connection (my-VPN in my case):
+
+```
+sudo grep uuid /etc/NetworkManager/system-connections/my-VPN
+```
+
+Then copy `uuid`. It should look like this `5a9bde6f-54ge-4h41-8754-f1a2977fa564`.
+
+Open your Wi-fi connection file:
+
+```
+sudo -e /etc/NetworkManager/system-connections/My-Wi-Fi
+```
+
+And add `secondaries` property with copied `uuid`. It should look like this:
+
+```
+[connection]
+id=My-Wi-Fi
+uuid=1ab56231-9401-48c7-82de-a9ffghtyeac4
+type=wifi
+interface-name=wlo1
+permissions=
+secondaries=5a9bde6f-54ge-4h41-8754-f1a2977fa564;
+timestamp=1649182910
+
+[wifi]
+...
+```
+
+After that restart NetworkManager or your computer:
+
+```
+sudo systemctl restart NetworkManager
+```
