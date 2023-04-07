@@ -1,7 +1,7 @@
 # pyenv
 
 - pyenv similar to nvm, but it builds from source
-- install dev libraries
+- install dev libraries (Wiki, troubleshooting)
 
 ```python
 pyenv install 3.10.6
