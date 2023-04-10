@@ -56,6 +56,16 @@ Allows for customizing of the date format on the panel.
 > *stop shop to monitor all of your vital sensors. Uses asynchronous polling to*
 > *provide a smooth user experience.*
 
+
+## AATWS - Advanced Alt-Tab Window Switcher
+
+<https://extensions.gnome.org/extension/4412/advanced-alttab-window-switcher/>
+
+> Highly customizable replacement for the Alt/Super+Tab window/app switchers
+> that offers 'type to search' mode, various filtering and sorting options,
+> workspace and monitor navigation, configurable hotkeys for navigation and
+> window/app control and an app launcher.
+
 # Gnome tweaks
 
 Tool to adjust advanced configuration settings for GNOME, including extensions.
