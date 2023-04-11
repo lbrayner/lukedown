@@ -66,6 +66,14 @@ Allows for customizing of the date format on the panel.
 > workspace and monitor navigation, configurable hotkeys for navigation and
 > window/app control and an app launcher.
 
+## Switcher
+
+<https://extensions.gnome.org/extension/973/switcher/>
+
+> Use the configured global hotkey (Super+w by default) to open a list of
+> current windows. Type a part of the name or title of the application window
+> you want to activate and hit enter or click on the item you wish to activate.
+
 # Gnome tweaks
 
 Tool to adjust advanced configuration settings for GNOME, including extensions.
