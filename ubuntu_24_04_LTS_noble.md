@@ -41,6 +41,10 @@ to changing format instruction.
 
 <https://github.com/KEIII/gnome-shell-panel-date-format>
 
+```bash
+dconf write /org/gnome/shell/extensions/panel-date-format/format "'%b %e  %a  %k:%M'"
+```
+
 ## Switcher
 
 <https://extensions.gnome.org/extension/973/switcher/>
