@@ -1,0 +1,3 @@
+- Auto-completion stopped working this one time.
+  - Was it 'omnifunc'? Or 'completefunc'?
+- Why won't new buffers created with `:edit` attach to `clojure_lsp`?
