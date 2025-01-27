@@ -4,13 +4,13 @@
 
 This will disable the **Dash to Dock** extension hotkeys:
 
-```
+```bash
 gsettings set org.gnome.shell.extensions.dash-to-dock hot-keys false
 ```
 
 And this will clear the Gnome default shortcuts for those combos:
 
-```
+```bash
 for i in {1..9}; do gsettings set "org.gnome.shell.keybindings" \
   "switch-to-application-$i" "[]"; done
 ```
@@ -71,3 +71,17 @@ Add `MOZ_ENABLE_WAYLAND=1` to `~/.pam_environment`.
 ## Wayland Google Chrome/Chromium
 
 Set **Preferred Ozone platform** to "Auto" or "Wayland" on `chrome://flags`.
+
+# Bugs
+
+## Slow shutdown
+
+[[SOLVED] Mint 22 very slow shutdown with external display - Linux Mint
+Forums](https://forums.linuxmint.com/viewtopic.php?t=436668)
+
+> It is possible because your computer is so new that it might work better with
+> the 6.11-oem kernel. You can install the latest 6.11-oem kernel with:
+
+```bash
+sudo apt-get install linux-oem-24.04b
+```
