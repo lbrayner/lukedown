@@ -68,9 +68,9 @@ dconf write /org/gnome/shell/extensions/panel-date-format/format "'%b %e  %a  %k
 
 Add `MOZ_ENABLE_WAYLAND=1` to `~/.pam_environment`.
 
-## Wayland Google Chrome/Chromium
+## Wayland Google Chrome, Chromium, Brave Browser
 
-Set **Preferred Ozone platform** to "Auto" or "Wayland" on `chrome://flags`.
+Set **Preferred Ozone platform** to "Wayland" on `chrome://flags`.
 
 # Bugs
 
