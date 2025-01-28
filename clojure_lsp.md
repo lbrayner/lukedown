@@ -7,4 +7,6 @@
   - Was it 'omnifunc'? Or 'completefunc'?
     - Yes, precisely!
 - Why won't new buffers created with `:edit` attach to `clojure_lsp`?
+ - Fixed!
 - Code action "Clean namespace" is "Organize imports".
+- DiagnosticChanged autocmd was not created this one time.
