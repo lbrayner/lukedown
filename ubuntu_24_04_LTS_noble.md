@@ -15,6 +15,14 @@ for i in {1..9}; do gsettings set "org.gnome.shell.keybindings" \
   "switch-to-application-$i" "[]"; done
 ```
 
+# Move Window to Center shortcut
+
+<https://www.reddit.com/r/gnome/comments/1f68p1w/manually_centering_a_window_via_shortcut_in_gnome/>
+
+```bash
+gsettings set org.gnome.desktop.wm.keybindings move-to-center "['<Super>c']"
+```
+
 # Gnome shell extensions
 
 Extend functionality of GNOME Shell. The following package contains a few useful
