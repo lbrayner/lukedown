@@ -28,9 +28,9 @@ gsettings set org.gnome.desktop.wm.keybindings move-to-center "['<Super>c']"
 Extend functionality of GNOME Shell. The following package contains a few useful
 extensions:
 
-~~~
+```bash
 sudo apt install gnome-shell-extensions
-~~~
+```
 
 ## Activate Window By Title
 
@@ -79,6 +79,29 @@ Add `MOZ_ENABLE_WAYLAND=1` to `~/.pam_environment`.
 ## Wayland Google Chrome, Chromium, Brave Browser
 
 Set **Preferred Ozone platform** to "Wayland" on `chrome://flags`.
+
+## Region and Language
+
+Gnome Settings is still buggy, does not do a good job at setting a different
+language for the user vs. the system default language.
+
+User custom locale can be defined with environment variables in
+`~/.pam_environment`.
+
+```
+LANGUAGE	DEFAULT=en_US:en
+LANG	DEFAULT=en_US.UTF-8
+LC_NUMERIC	DEFAULT=en_US.UTF-8
+LC_TIME	DEFAULT=en_US.UTF-8
+LC_MONETARY	DEFAULT=en_US.UTF-8
+LC_PAPER	DEFAULT=en_US.UTF-8
+LC_NAME	DEFAULT=en_US.UTF-8
+LC_ADDRESS	DEFAULT=en_US.UTF-8
+LC_TELEPHONE	DEFAULT=en_US.UTF-8
+LC_MEASUREMENT	DEFAULT=en_US.UTF-8
+LC_IDENTIFICATION	DEFAULT=en_US.UTF-8
+PAPERSIZE	DEFAULT=a4
+```
 
 # Bugs
 
